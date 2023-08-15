@@ -4,7 +4,7 @@ import 'package:automynd/viewController/system_controller.dart';
 import 'package:get/get.dart';
 
 class SplashBloc {
-  final _splashDelay = 2;
+  final _splashDelay = 3;
 
   /// Navigate to Screen after 3 seconds
   splashDelayWidget() async {
