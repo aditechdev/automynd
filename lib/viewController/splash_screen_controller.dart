@@ -16,7 +16,7 @@ class SplashBloc {
   }
 
   void _navigationPage() {
-    Get.offAndToNamed(RoutePath.loginScreen);
+    Get.offAndToNamed(RoutePath.onBoardingScreen);
     systemController.enableStatusBar();
   }
 }
