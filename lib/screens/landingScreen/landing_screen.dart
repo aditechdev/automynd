@@ -1,3 +1,5 @@
+import 'package:automynd/screens/homeScreen/home_screen.dart';
+import 'package:automynd/screens/profileScreen/profile_screen.dart';
 import 'package:flutter/material.dart';
 
 class LandingScreen extends StatefulWidget {
@@ -10,10 +12,10 @@ class LandingScreen extends StatefulWidget {
 class _LandingScreenState extends State<LandingScreen> {
   int _currentIndex = 0;
   final List<Widget> _bottomNavPage = [
-    const Text("Home"),
+    const HomeScreen(),
     const Text("data"),
     const Text("dat"),
-    const Text("Profile"),
+    const ProfileScreen()
   ];
 
   changePage(int index) {
