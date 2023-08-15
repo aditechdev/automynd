@@ -1,10 +1,11 @@
 import 'dart:async';
-import 'package:automynd/config/routes/route_path.dart';
+import 'package:automynd/repository/auth_repository.dart';
 import 'package:automynd/viewController/system_controller.dart';
 import 'package:get/get.dart';
 
 class SplashBloc {
   final _splashDelay = 3;
+  final _authRepository = Get.put(AuthRepository());
 
   /// Navigate to Screen after 3 seconds
   splashDelayWidget() async {
@@ -16,7 +17,7 @@ class SplashBloc {
   }
 
   void _navigationPage() {
-    Get.offAndToNamed(RoutePath.onBoardingScreen);
+    _authRepository.setInitialScreen();
     systemController.enableStatusBar();
   }
 }
