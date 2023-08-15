@@ -1,3 +1,4 @@
+import 'package:automynd/const/resource.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -24,17 +25,14 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
+      backgroundColor: Colors.black,
       body: Center(
-        child: Text(
-          '<  START CODING / >',
-          style: TextStyle(
-            fontSize: 20,
-            color: Colors.blue,
-          ),
-          textAlign: TextAlign.center,
-        ),
-      ),
+          child: Image.asset(
+        R.ASSETS_LOGO_AUTO_MYND_LOGO_PNG,
+        height: 60,
+        width: 80,
+      )),
     );
   }
 }
