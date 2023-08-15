@@ -2,6 +2,7 @@ import 'package:automynd/component/commonComponent/custom_elevated_button.dart';
 import 'package:automynd/component/commonComponent/custom_text_form_filed.dart';
 import 'package:automynd/config/routes/route_path.dart';
 import 'package:automynd/utils/empty_box_utils.dart';
+import 'package:automynd/viewController/auth_view_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -44,7 +45,7 @@ class SignUpFormComponent extends StatelessWidget {
               width: MediaQuery.of(context).size.width,
               child: CustomElevatedButton(
                 btnText: "SignUp",
-                onTap: () {},
+                onTap: () => authViewController.signUp(),
               ),
             ),
             Align(

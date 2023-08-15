@@ -22,10 +22,10 @@ class AnimatedAppNameComponent extends StatelessWidget {
     ];
 
     const colorizeTextStyle = TextStyle(
-      fontSize: 20.0,
+      fontSize: 25.0,
       fontFamily: 'Schyler',
     );
-    int totalRepatation = 100;
+    int totalRepatation = 2;
     return Row(
       crossAxisAlignment: CrossAxisAlignment.center,
       mainAxisAlignment: MainAxisAlignment.center,

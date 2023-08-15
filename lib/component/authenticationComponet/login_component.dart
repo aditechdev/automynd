@@ -1,6 +1,7 @@
 import 'package:automynd/component/commonComponent/custom_elevated_button.dart';
 import 'package:automynd/component/commonComponent/custom_text_form_filed.dart';
 import 'package:automynd/utils/empty_box_utils.dart';
+import 'package:automynd/viewController/auth_view_controller.dart';
 import 'package:flutter/material.dart';
 
 class LoginFormComponent extends StatelessWidget {
@@ -40,7 +41,10 @@ class LoginFormComponent extends StatelessWidget {
         ),
         SizedBox(
           width: size.width,
-          child: CustomElevatedButton(btnText: "Login", onTap: () {}),
+          child: CustomElevatedButton(
+            btnText: "Login",
+            onTap: () => authViewController.signIn(),
+          ),
         )
       ],
     ));
