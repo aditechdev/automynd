@@ -36,6 +36,8 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   flutter_svg: ^2.0.7
+  get: ^4.6.5
+  animated_text_kit: ^4.2.2
   
   # pub run build_runner
 
@@ -82,10 +84,13 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
+  fonts:
+    - family: Schyler
+      fonts:
+        - asset: assets/fonts/itcBahusFont/ITCBauhausMedium.otf
+    - family: Allura
+      fonts:
+        - asset: "assets/fonts/allura/Allura-Regular.ttf"
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro
