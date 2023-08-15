@@ -1,8 +1,6 @@
 import 'package:automynd/component/authenticationComponet/auth_header_widget.dart';
 import 'package:automynd/component/authenticationComponet/sign_up_form_component.dart';
-import 'package:automynd/component/commonComponent/custom_text_form_filed.dart';
 import 'package:automynd/const/resource.dart';
-import 'package:automynd/utils/empty_box_utils.dart';
 import 'package:flutter/material.dart';
 
 class SignUpScreen extends StatelessWidget {
