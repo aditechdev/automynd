@@ -1,8 +1,10 @@
 import 'package:automynd/component/commonComponent/custom_elevated_button.dart';
 import 'package:automynd/component/commonComponent/custom_outlined_button.dart';
+import 'package:automynd/config/routes/route_path.dart';
 import 'package:automynd/const/resource.dart';
 import 'package:automynd/utils/empty_box_utils.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
@@ -45,10 +47,14 @@ class WelcomeScreen extends StatelessWidget {
           Row(
             children: [
               Expanded(
-                  child: CustomOutLinedButton(btnText: "Login", onTap: () {})),
+                  child: CustomOutLinedButton(
+                      btnText: "Login",
+                      onTap: () => Get.toNamed(RoutePath.loginScreen))),
               horizontalSpace(20),
               Expanded(
-                  child: CustomElevatedButton(btnText: "SignUp", onTap: () {}))
+                  child: CustomElevatedButton(
+                      btnText: "SignUp",
+                      onTap: () => Get.toNamed(RoutePath.signUpScreen)))
             ],
           ),
           verticatSpace(50),

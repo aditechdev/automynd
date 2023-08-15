@@ -3,6 +3,7 @@ class RoutePath {
   static String loginScreen = '/login';
   static String onBoardingScreen = '/onborading';
   static String welcomeScreen = '/welcome';
+  static String signUpScreen = '/signUp';
 
 
 }

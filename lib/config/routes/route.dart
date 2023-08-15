@@ -1,6 +1,7 @@
 import 'package:automynd/config/routes/route_path.dart';
 import 'package:automynd/screens/loginScreen/login_screen.dart';
 import 'package:automynd/screens/onBoardingScreen/on_boarding_screen.dart';
+import 'package:automynd/screens/signUpScreen/sign_up_screen.dart';
 import 'package:automynd/screens/splashScreen/splash_screen.dart';
 import 'package:automynd/screens/welcomeScreen/welcome_screen.dart';
 import 'package:get/get.dart';
@@ -25,6 +26,10 @@ class ScreenRouter {
     GetPage(
       name: RoutePath.welcomeScreen,
       page: () => const WelcomeScreen(),
+    ),
+    GetPage(
+      name: RoutePath.signUpScreen,
+      page: () => const SignUpScreen(),
     ),
   ];
 

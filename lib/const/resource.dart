@@ -4,6 +4,10 @@
 class R {
   const R._();
 
+  /// ![preview](file:///Users/adityaanand/Downloads/project/flutter/automynd/assets/image/login_image.png)
+  static const String ASSETS_IMAGE_LOGIN_IMAGE_PNG =
+      'assets/image/login_image.png';
+
   /// ![preview](file:///Users/adityaanand/Downloads/project/flutter/automynd/assets/image/on_boarding_image_2.png)
   static const String ASSETS_IMAGE_ON_BOARDING_IMAGE_2_PNG =
       'assets/image/on_boarding_image_2.png';
@@ -15,6 +19,10 @@ class R {
   /// ![preview](file:///Users/adityaanand/Downloads/project/flutter/automynd/assets/image/on_boarding_image_one.png)
   static const String ASSETS_IMAGE_ON_BOARDING_IMAGE_ONE_PNG =
       'assets/image/on_boarding_image_one.png';
+
+  /// ![preview](file:///Users/adityaanand/Downloads/project/flutter/automynd/assets/image/sign_up_image.png)
+  static const String ASSETS_IMAGE_SIGN_UP_IMAGE_PNG =
+      'assets/image/sign_up_image.png';
 
   /// ![preview](file:///Users/adityaanand/Downloads/project/flutter/automynd/assets/image/welcome_screen.png)
   static const String ASSETS_IMAGE_WELCOME_SCREEN_PNG =
