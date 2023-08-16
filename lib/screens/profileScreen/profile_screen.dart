@@ -14,7 +14,6 @@ class ProfileScreen extends StatelessWidget {
         "🚧 🚧 🚧 🚧 🚧",
         "Work in Progress",
       );
-     
     }
   }
 
@@ -36,21 +35,34 @@ class ProfileScreen extends StatelessWidget {
         child: Column(
           children: [
             // verticatSpace(20),
-            Container(
-              width: 100,
-              height: 100,
-              decoration: const BoxDecoration(
-                  color: Colors.grey, shape: BoxShape.circle),
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(100),
-                child: const Icon(
-                  Icons.person,
-                  size: 55,
-                  color: Colors.white,
-                ),
+            Stack(
+              children: [
+                Container(
+                  width: 100,
+                  height: 100,
+                  decoration: const BoxDecoration(
+                      color: Colors.grey, shape: BoxShape.circle),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(100),
+                    child: const Icon(
+                      Icons.person,
+                      size: 55,
+                      color: Colors.white,
+                    ),
 
-                // child: Image.asset(name),
-              ),
+                    // child: Image.asset(name),
+                  ),
+                ),
+                Positioned(
+                    bottom: 0,
+                    right: -15,
+                    child: IconButton(
+                        onPressed: () {},
+                        icon: const Icon(
+                          Icons.camera,
+                          color: Colors.black,
+                        )))
+              ],
             ),
             verticatSpace(10),
             const Text(

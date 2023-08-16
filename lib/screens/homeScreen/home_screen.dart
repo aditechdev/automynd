@@ -299,7 +299,6 @@ class _HomeScreenState extends State<HomeScreen> {
                 height: media.width * 0.05,
               ),
               Container(),
-
               Column(
                 children: List.generate(20, (index) {
                   return ListTile(
@@ -314,15 +313,6 @@ class _HomeScreenState extends State<HomeScreen> {
                   );
                 }),
               )
-              // Expanded(
-              //   child: ListView.builder(
-              //       itemCount: 200,
-              //       itemBuilder: (context, index) {
-              //         return const ListTile(
-              //           title: Text("data"),
-              //         );
-              //       }),
-              // ),
             ],
           ),
         ),
