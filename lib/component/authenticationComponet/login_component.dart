@@ -1,8 +1,9 @@
 import 'package:automynd/component/commonComponent/custom_elevated_button.dart';
 import 'package:automynd/component/commonComponent/custom_text_form_filed.dart';
 import 'package:automynd/utils/empty_box_utils.dart';
-import 'package:automynd/viewController/auth_view_controller.dart';
+import 'package:automynd/viewController/sign_in_controller.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class LoginFormComponent extends StatelessWidget {
   const LoginFormComponent({
@@ -12,6 +13,8 @@ class LoginFormComponent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
+    final controller = Get.put(SignInController());
+    final formKey = GlobalKey<FormState>();
 
     return Form(
         child: Column(
@@ -32,7 +35,13 @@ class LoginFormComponent extends StatelessWidget {
           textEditingController: null,
           obscureText: true,
           suffixIcon: IconButton(
-              onPressed: () {}, icon: const Icon(Icons.remove_red_eye)),
+              onPressed: () {
+                Get.snackbar(
+                  "🚧 🚧 🚧 🚧 🚧",
+                  "Work in Progress",
+                );
+              },
+              icon: const Icon(Icons.remove_red_eye)),
         ),
         Align(
           alignment: Alignment.centerRight,
@@ -43,7 +52,13 @@ class LoginFormComponent extends StatelessWidget {
           width: size.width,
           child: CustomElevatedButton(
             btnText: "Login",
-            onTap: () => authViewController.signIn(),
+            onTap: () {
+              if (formKey.currentState!.validate()) {
+                SignInController.instance.registerUserUsingEmailAndPassword(
+                    controller.emailController.text.trim(),
+                    controller.passwordController.text.trim());
+              }
+            },
           ),
         )
       ],

@@ -13,8 +13,8 @@ class _LandingScreenState extends State<LandingScreen> {
   int _currentIndex = 0;
   final List<Widget> _bottomNavPage = [
     const HomeScreen(),
-    const Text("data"),
-    const Text("dat"),
+    // const Text("data"),
+    // const Text("dat"),
     const ProfileScreen()
   ];
 
@@ -38,14 +38,14 @@ class _LandingScreenState extends State<LandingScreen> {
               icon: Icon(Icons.home),
               label: "Home",
             ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.home),
-              label: "Home",
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.home),
-              label: "Home",
-            ),
+            // BottomNavigationBarItem(
+            //   icon: Icon(Icons.home),
+            //   label: "Home",
+            // ),
+            // BottomNavigationBarItem(
+            //   icon: Icon(Icons.home),
+            //   label: "Home",
+            // ),
             BottomNavigationBarItem(
                 icon: Icon(
                   Icons.person,

@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:automynd/config/routes/route_path.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
@@ -17,13 +15,14 @@ class AuthRepository extends GetxController {
 
     firebaseUser.bindStream(_auth.userChanges());
 
-    // ever(firebaseUser, (callback) => _setInitialScreen());
+    // ever(firebaseUser, (callback) => setInitialScreen());
   }
 
   setInitialScreen() {
     firebaseUser.value == null
-        ? Get.offAllNamed(RoutePath.welcomeScreen)
+        ? Get.offAllNamed(RoutePath.onBoardingScreen)
         : Get.offAllNamed(RoutePath.landingScreen);
+
   }
 
   Future<void> createUserWithEmailAndPassword(
@@ -31,6 +30,7 @@ class AuthRepository extends GetxController {
     try {
       await _auth.createUserWithEmailAndPassword(
           email: email, password: password);
+      setInitialScreen();
     } catch (e) {
       print(e);
     }
@@ -41,17 +41,16 @@ class AuthRepository extends GetxController {
     try {
       await _auth.signInWithEmailAndPassword(email: email, password: password);
 
-      firebaseUser.value != null
-          ? Get.offAllNamed(RoutePath.welcomeScreen)
-          : Get.offAllNamed(RoutePath.landingScreen);
+      setInitialScreen();
     } catch (e) {
       print(e);
     }
   }
 
-  Future<void> logOut(String email, String password) async {
+  Future<void> logOut() async {
     try {
       await _auth.signOut();
+      setInitialScreen();
     } catch (e) {
       print(e);
     }
