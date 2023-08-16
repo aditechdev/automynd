@@ -22,7 +22,6 @@ class AuthRepository extends GetxController {
     firebaseUser.value == null
         ? Get.offAllNamed(RoutePath.onBoardingScreen)
         : Get.offAllNamed(RoutePath.landingScreen);
-
   }
 
   Future<void> createUserWithEmailAndPassword(

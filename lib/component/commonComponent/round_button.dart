@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 enum RoundButtonType { bgGradient, bgSGradient, textGradient }
 
 class RoundButton extends StatelessWidget {
@@ -17,7 +16,7 @@ class RoundButton extends StatelessWidget {
       this.type = RoundButtonType.bgGradient,
       this.fontSize = 16,
       this.elevation = 1,
-      this.fontWeight= FontWeight.w700,
+      this.fontWeight = FontWeight.w700,
       required this.onPressed});
 
   @override
@@ -26,8 +25,8 @@ class RoundButton extends StatelessWidget {
       decoration: BoxDecoration(
           gradient: LinearGradient(
             colors: type == RoundButtonType.bgSGradient
-                ? [Color(0xffEEA4CE), Color(0xffC58BF2)]
-                :[Color(0xff9DCEFF),  Color(0xff92A3FD)],
+                ? [const Color(0xffEEA4CE), const Color(0xffC58BF2)]
+                : [const Color(0xff9DCEFF), const Color(0xff92A3FD)],
           ),
           borderRadius: BorderRadius.circular(25),
           boxShadow: type == RoundButtonType.bgGradient ||
@@ -43,7 +42,7 @@ class RoundButton extends StatelessWidget {
         onPressed: onPressed,
         height: 50,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(25)),
-        textColor: Color(0xff92A3FD),
+        textColor: const Color(0xff92A3FD),
         minWidth: double.maxFinite,
         elevation: type == RoundButtonType.bgGradient ||
                 type == RoundButtonType.bgSGradient
@@ -52,7 +51,7 @@ class RoundButton extends StatelessWidget {
         color: type == RoundButtonType.bgGradient ||
                 type == RoundButtonType.bgSGradient
             ? Colors.transparent
-            :Colors.white,
+            : Colors.white,
         child: type == RoundButtonType.bgGradient ||
                 type == RoundButtonType.bgSGradient
             ? Text(title,
@@ -63,8 +62,8 @@ class RoundButton extends StatelessWidget {
             : ShaderMask(
                 blendMode: BlendMode.srcIn,
                 shaderCallback: (bounds) {
-                  return LinearGradient(
-                          colors:[Color(0xff9DCEFF),  Color(0xff92A3FD)],
+                  return const LinearGradient(
+                          colors: [Color(0xff9DCEFF), Color(0xff92A3FD)],
                           begin: Alignment.centerLeft,
                           end: Alignment.centerRight)
                       .createShader(
